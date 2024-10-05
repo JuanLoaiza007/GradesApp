@@ -29,7 +29,7 @@ class FirstFragment : Fragment() {
     }
 
     private fun navigationFragmentFirst() {
-        binding.btnSwitchToSecondFragment.setOnClickListener {
+        binding.btnCalcular.setOnClickListener {
             findNavController().navigate(R.id.action_fragmentFirst_to_fragmentSecond)
         }
     }
