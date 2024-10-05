@@ -19,4 +19,16 @@ class FirstFragment : Fragment() {
         binding.lifecycleOwner = this
         return binding.root
     }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        navigationFragmentFirst()
+    }
+
+    private fun navigationFragmentFirst(){
+        /*
+        * Some functionality
+        * */
+    }
 }

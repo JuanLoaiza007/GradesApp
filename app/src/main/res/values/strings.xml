@@ -1,5 +1,8 @@
 <resources>
     <string name="app_name">GradesApp</string>
-    <!-- TODO: Remove or change this placeholder text -->
+    <string name="fragment_first_title">Hello, I\'m FirstFragment</string>
+    <string name="fragment_second_title">Hello, I\'m SecondFragment</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="switch_to_firstfragment">Switch to FirstFragment</string>
+    <string name="switch_to_secondfragment">Switch to SecondFragment</string>
 </resources>

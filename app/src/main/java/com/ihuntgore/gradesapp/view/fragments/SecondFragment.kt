@@ -20,4 +20,16 @@ class SecondFragment : Fragment() {
         binding.lifecycleOwner = this
         return binding.root
     }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        captureData()
+    }
+
+    private fun captureData(){
+        /*
+        * Some functionality
+        * */
+    }
 }
