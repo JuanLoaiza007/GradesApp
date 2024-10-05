@@ -36,11 +36,13 @@ class SecondFragment : Fragment() {
         // Es OBLIGATORIO comprobar que el bundle no sea null antes de empezar a usarlo
         if (bundle != null) {
             val estudiante = bundle.getSerializable(FirstFragment.ESTUDIANTE_BUNDLE) as Student
-            Toast.makeText(
-                requireContext(),
-                "El promedio del estudiante es ${estudiante.promedio}",
-                Toast.LENGTH_SHORT
-            ).show()
+
+            val message = "Estudiante: ${estudiante.name}" +
+                    "\nNota 1: ${estudiante.grade1}" +
+                    "\nNota 2: ${estudiante.grade2}" +
+                    "\nPromedio: ${estudiante.promedio}"
+
+            binding.fragmentContent.text = message
         } else {
             Toast.makeText(requireContext(), "No hay datos disponibles", Toast.LENGTH_SHORT).show()
         }
