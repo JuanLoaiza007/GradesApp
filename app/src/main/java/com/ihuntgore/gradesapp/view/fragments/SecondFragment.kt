@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.navigation.fragment.findNavController
 import com.ihuntgore.gradesapp.databinding.FragmentSecondBinding
 import com.ihuntgore.gradesapp.view.model.Student
 
@@ -26,7 +27,22 @@ class SecondFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        initUI()
+        initListeners()
+    }
+
+    private fun initUI(){
         captureData()
+    }
+
+    private fun initListeners(){
+        addListenerBtnVolver()
+    }
+
+    private fun addListenerBtnVolver(){
+        binding.btnSwitchToFirstFragment.setOnClickListener {
+            findNavController().popBackStack()
+        }
     }
 
     private fun captureData() {
