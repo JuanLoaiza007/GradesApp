@@ -34,10 +34,14 @@ class FirstFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        navigationFragmentFirst()
+        initListeners()
     }
 
-    private fun navigationFragmentFirst() {
+    private fun initListeners() {
+        addListenerBtnCalcular()
+    }
+
+    private fun addListenerBtnCalcular(){
         binding.btnCalcular.setOnClickListener {
             val nombre = "Default"
             val nota1 = binding.etNota1.text.toString()
