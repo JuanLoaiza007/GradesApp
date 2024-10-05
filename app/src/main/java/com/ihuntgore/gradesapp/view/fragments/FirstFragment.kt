@@ -5,6 +5,8 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.findNavController
+import com.ihuntgore.gradesapp.R
 import com.ihuntgore.gradesapp.databinding.FragmentFirstBinding
 
 class FirstFragment : Fragment() {
@@ -26,9 +28,9 @@ class FirstFragment : Fragment() {
         navigationFragmentFirst()
     }
 
-    private fun navigationFragmentFirst(){
-        /*
-        * Some functionality
-        * */
+    private fun navigationFragmentFirst() {
+        binding.btnSwitchToSecondFragment.setOnClickListener {
+            findNavController().navigate(R.id.action_fragmentFirst_to_fragmentSecond)
+        }
     }
 }
