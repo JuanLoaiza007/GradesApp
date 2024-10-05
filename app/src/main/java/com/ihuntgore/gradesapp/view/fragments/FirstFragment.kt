@@ -5,15 +5,18 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.ihuntgore.gradesapp.R
+import com.ihuntgore.gradesapp.databinding.FragmentFirstBinding
 
 class FirstFragment : Fragment() {
-    
+
+    private lateinit var binding: FragmentFirstBinding
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-
-        return inflater.inflate(R.layout.fragment_first, container, false)
+        binding = FragmentFirstBinding.inflate(inflater)
+        binding.lifecycleOwner = this
+        return binding.root
     }
 }
